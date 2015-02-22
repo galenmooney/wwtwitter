@@ -4,6 +4,47 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+
+ /*TWEET STYLE */
+
+ ul.tweet {
+max-width: 800px;
+ }
+
+ ul.tweet li {
+    padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  border-top: 5px solid #81CFE0;
+ }
+
+ p.tweet-user {
+  font-size: 22px;
+  font-family: Montserrat;
+  font-weight: 200;
+  color: #666;
+ }
+
+ p.tweet-content {
+  font-size: 16px;
+  font-family: Raleway;
+ }
+
+ div.follow-btn {
+  text-align: right;
+  float: right;
+ }
+
+  div.follow-btn input,  div.follow-btn button {
+    width: 120px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 11px;
+    font-family: Montserrat;
+    padding: 8px 0;
+  }
+
 .btn-default,
 .btn-primary,
 .btn-success,

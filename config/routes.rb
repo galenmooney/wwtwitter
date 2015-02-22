@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
   root 'static_pages#main_page'
 
-  resources :tweets
+  resources :tweets, except: [:edit, :show, :update, :delete]
+  resources :relationships, only: :create 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

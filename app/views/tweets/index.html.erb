@@ -1,8 +1,21 @@
-This is the index page
+<h1>All Da Tweets</h1>
 
 <% @tweets.each do |tweet| %>
-	<ul class="list-group">
-		<li class="list-group-item"><p><strong><%= tweet.user.email %></strong></p><p><%= tweet.content %></p>
+	<ul class="list-group tweet">
+		<li class="list-group-item"><p class="tweet-user"><strong><%= tweet.user.email %></strong></p>
+		<div class="follow-btn">
+			<% if current_user.following?(tweet.user) %>
+				<button type="button" class="btn btn-danger">
+				Following
+				</button>		
+				<% else %>
+					<%= simple_form_for @relationship do |f| %>
+					<%= f.input :followed_id, as: :hidden, input_html: {value: tweet.user.id} %>
+					<%= f.button :submit, class: 'btn btn-primary', value: 'Follow' %>
+					<% end %>
+				<% end %>
+		</div>
+			<p class="tweet-content"><%= tweet.content %></p>
 		</li>
 	</ul>
 <% end %>
