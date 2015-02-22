@@ -11,10 +11,11 @@ class TweetsController < ApplicationController
 		@tweet.user = current_user
 		if @tweet.save
 			flash[:success] = "You have created a Twipp"
+			redirect_to new_tweet_path
 		else
-			flash[:danger] = "BAD TWEET TOO LONG"	
+			render 'new'	
 		end
-		redirect_to new_tweet_path
+
 	end
 
 	private 

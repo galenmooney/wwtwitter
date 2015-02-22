@@ -1,6 +1,8 @@
 Here is where new tweets go
 
 <%= simple_form_for @tweet do |f| %>
-  <%= f.input :content %>
-  <%= f.button :submit %>
+	<%= f.error_notification %>
+  	<%= f.input :content %>
+  	
+  	<%= f.button :submit %>
 <% end %>
