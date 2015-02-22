@@ -18,6 +18,10 @@ class TweetsController < ApplicationController
 
 	end
 
+	def index 
+		@tweets = Tweet.all  
+	end	
+
 	private 
 
 	def tweet_params
