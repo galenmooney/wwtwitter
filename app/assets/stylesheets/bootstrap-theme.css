@@ -45,6 +45,12 @@ max-width: 800px;
     padding: 8px 0;
   }
 
+
+p.profile-img img {
+ max-width: 250px;
+ border-radius: 50%; 
+
+}
 .btn-default,
 .btn-primary,
 .btn-success,
