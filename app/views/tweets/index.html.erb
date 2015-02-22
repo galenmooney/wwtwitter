@@ -1,8 +1,8 @@
 This is the index page
 
 <% @tweets.each do |tweet| %>
-	<ul>
-	<li><%= tweet.content %> |
-	<%= tweet.user.email %></li>
-</ul>
+	<ul class="list-group">
+		<li class="list-group-item"><p><strong><%= tweet.user.email %></strong></p><p><%= tweet.content %></p>
+		</li>
+	</ul>
 <% end %>
