@@ -8,7 +8,8 @@
  /*TWEET STYLE */
 
  ul.tweet {
-max-width: 800px;
+max-width: 
+800px;
  }
 
  ul.tweet li {
@@ -50,6 +51,20 @@ p.profile-img img {
  max-width: 250px;
  border-radius: 50%; 
 
+}
+
+.tweet-image img {
+ max-width: 80px;
+ border-radius: 50%; 
+}
+
+div.tweet-image {
+  float:left;
+   width: 20%;
+}
+
+div.tweet-container{
+  float:left; width: 60%;
 }
 .btn-default,
 .btn-primary,

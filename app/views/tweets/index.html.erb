@@ -1,8 +1,11 @@
 <h1>All Da Tweets</h1>
 
 <% @tweets.each do |tweet| %>
+	<% if tweet.user.profile %>
 	<ul class="list-group tweet">
-		<li class="list-group-item"><p class="tweet-user"><strong><%= tweet.user.email %></strong></p>
+		<li class="list-group-item">
+<div class="tweet-image"><%= image_tag tweet.user.profile.picture %></div><div class="tweet-container">
+			<p class="tweet-user"><strong><%= link_to "#{tweet.user.profile.name}", profile_path(tweet.user.profile.name) %></strong></p>
 		<div class="follow-btn">
 			<% if current_user.following?(tweet.user) %>
 				<button type="button" class="btn btn-danger">
@@ -17,5 +20,7 @@
 		</div>
 			<p class="tweet-content"><%= tweet.content %></p>
 		</li>
+	</div>
 	</ul>
+<% end %>
 <% end %>
