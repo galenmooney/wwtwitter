@@ -1,0 +1,10 @@
+<h1>Profiles#new</h1>
+<p>Find me in app/views/profiles/new.html.erb</p>
+
+<%= simple_form_for @profile do |p| %>
+  	<%= p.input :name %>
+  	<%= p.input :picture %>
+  	<%= p.input :bio %>
+  	<%= p.button :submit %>
+
+<% end %>
